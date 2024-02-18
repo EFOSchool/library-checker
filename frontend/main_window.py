@@ -5,6 +5,8 @@ def show_open(libraries):
     # hide the button
     button.pack_forget()
 
+    
+
 
 root = tk.Tk()
 root.title("UC Library Hours Checker")
