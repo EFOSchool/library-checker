@@ -1,8 +1,22 @@
 import requests
 import urllib3
+import re
 from bs4 import BeautifulSoup
+from datetime import datetime
 
+class libraryObj:
+    def __init__(self, libraries):
+        self.name = library.find("span", class_="title")
 
+        # finding the hours based on patterns with regex
+        content = library.find("div", class_="component text")
+
+        # using regex to find the normal hours
+        normalHoursPattern 
+
+        # using regex to find the holiday hours
+        breakHoursPattern
+        
 
 # Suppress InsecureRequestWarning
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -21,7 +35,8 @@ if page.status_code == 200:
 
     # finding the title in all of the components
     for library in libraries:
-        name = library.find("span", class_="title")
-        print(name.text)
+        # create new library object based on results   
+        library = libraryObj(libraries)
+        
 else:
     print(f"Failed to fetch URL: HTTP status code {page.status_code}")
